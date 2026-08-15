@@ -1,7 +1,7 @@
 export class Character{
-    private name: string;
-    private level: number;
-    private health: number;
+    protected name: string;
+    protected level: number;
+    protected health: number;
 
     constructor(name: string, level: number, health: number){
         this.name = name;
