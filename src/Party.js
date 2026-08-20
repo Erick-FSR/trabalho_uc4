@@ -1,15 +1,12 @@
-import { Character } from "./Character";
-
-export class Party {
-    private name: string;
-    private members: Character[];
-
-    constructor(name: string) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Party = void 0;
+class Party {
+    constructor(name) {
         this.name = name;
         this.members = [];
     }
-
-    showMembers(): void{
+    showMembers() {
         console.log(`
             =========================
             ${this.name} 
@@ -17,23 +14,19 @@ export class Party {
             `);
         console.log(this.members.map(member => `${member.getName()} - Level: ${member.getLevel()}`).join(`\n`));
     }
-
-    addMember(character: Character): void {
-        if(this.members.includes(character)){
+    addMember(character) {
+        if (this.members.includes(character)) {
             console.log(`This Chararcter is already in the party!`);
-        }else{
+        }
+        else {
             this.members.push(character);
         }
     }
-
-    removeMember(character: Character): void {
+    removeMember(character) {
         const index = this.members.indexOf(character);
-        if(index !== -1){
+        if (index !== -1) {
             this.members.splice(index, 1);
-        } 
-
+        }
+    }
 }
-
-
-
-}
+exports.Party = Party;
