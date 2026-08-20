@@ -1,35 +1,39 @@
 export class Spell {
-    name: string;
-    damage: number;
-    manaCost: number;
+    private name: string;
+    private damage: number;
+    private manaCost: number;
 
-    constructor(name: string, damage: number, manaCost: number) {
+   public constructor(name: string, damage: number, manaCost: number) {
         this.name = name;
         this.damage = damage;
         this.manaCost = manaCost;
     }
 
-    getName(): string {
+    public getName(): string {
         return this.name;
     }
 
-    getDamage(): number {
+    public getDamage(): number {
         return this.damage;
     }
 
-    setName(name: string): void {
+    public setName(name: string): void {
         this.name = name;
     }
 
-    setDamage(damage: number): void {
+    public setDamage(damage: number): void {
         this.damage = damage;
     }
 
-    setManaCost(manaCost: number): void {
+    public setManaCost(manaCost: number): void {
         this.manaCost = manaCost;
     }
 
-    showInfo(): void {
+    public getManaCost(): number{
+        return this.manaCost;
+    }
+
+    public showInfo(): void {
         console.log(`
             =========================
             SPELL

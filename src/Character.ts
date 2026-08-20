@@ -3,40 +3,40 @@ export class Character{
     protected level: number;
     protected health: number;
 
-    constructor(name: string, level: number, health: number){
+   public constructor(name: string, level: number, health: number){
         this.name = name;
         this.level = level;
         this.health = health;
     }
 
-    getName(): string{
+    public getName(): string{
         return this.name;
 
     }
 
-    setName(newName: string): void{
+    public setName(newName: string): void{
         this.name = newName;
     }
 
-    getLevel(): number{
+    public getLevel(): number{
         return this.level;
 
     }
 
-    setLevel(newLevel: number): void{
+    public setLevel(newLevel: number): void{
         this.level = newLevel;
     }
 
-    getHealth(): number{
+    public getHealth(): number{
         return this.health;
     }
 
-    setHealth(newHealth: number): void{
+    public setHealth(newHealth: number): void{
         this.health = newHealth;
 
     }
 
-    takeDamage(amount: number): void{
+    public takeDamage(amount: number): void{
         if(this.health <= 0){
             console.log(`O personagem não pode morrer!`);
         } else{
@@ -48,7 +48,7 @@ export class Character{
         
     }
 
-    showInfo(): void{
+    public showInfo(): void{
         console.log(`
             ==================
             INFO CHARACTER

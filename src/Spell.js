@@ -22,6 +22,9 @@ class Spell {
     setManaCost(manaCost) {
         this.manaCost = manaCost;
     }
+    getManaCost() {
+        return this.manaCost;
+    }
     showInfo() {
         console.log(`
             =========================

@@ -1,29 +1,29 @@
 export class Weapon{
-    name: string;
-    damage: number;
+   private name: string;
+   private damage: number;
 
     constructor(name: string, damage:number){
         this.name = name;
         this.damage = damage;
     }
 
-    getName(): string{
+   public getName(): string{
         return this.name;
     }
 
-    getDamage(): number{
+   public getDamage(): number{
         return this.damage;
     }
 
-    setName(name: string): void{
+   public setName(name: string): void{
         this.name = name;
     }
 
-    setDamage(damage: number): void{
+   public setDamage(damage: number): void{
         this.damage = damage;
     }
 
-    showInfo(): void{
+   public showInfo(): void{
         console.log(`
             =========================
             WEAPON

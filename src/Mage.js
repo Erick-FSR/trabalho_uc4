@@ -15,8 +15,8 @@ class Mage extends Character_1.Character {
         this.mana = newMana;
     }
     castSpell() {
-        if (this.mana >= this.spell.manaCost) {
-            this.mana -= this.spell.manaCost;
+        if (this.mana >= this.spell.getManaCost()) {
+            this.mana -= this.spell.getManaCost();
             console.log(`${this.name} casts ${this.spell.getName()}!`);
             console.log(`Damage dealt: ${this.spell.getDamage()}`);
             console.log(`Remaining mana: ${this.mana}`);
@@ -30,7 +30,7 @@ class Mage extends Character_1.Character {
         console.log(`Level: ${this.level}`);
         console.log(`Health: ${this.health}`);
         console.log(`Mana: ${this.mana}`);
-        console.log(`Spell: ${this.spell.getName()} (Damage: ${this.spell.getDamage()}, Mana Cost: ${this.spell.manaCost})`);
+        console.log(`Spell: ${this.spell.getName()} (Damage: ${this.spell.getDamage()}, Mana Cost: ${this.spell.getManaCost()})`);
     }
 }
 exports.Mage = Mage;

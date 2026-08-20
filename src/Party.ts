@@ -4,12 +4,12 @@ export class Party {
     private name: string;
     private members: Character[];
 
-    constructor(name: string) {
+   public constructor(name: string) {
         this.name = name;
         this.members = [];
     }
 
-    showMembers(): void{
+    public showMembers(): void{
         console.log(`
             =========================
             ${this.name} 
@@ -18,7 +18,7 @@ export class Party {
         console.log(this.members.map(member => `${member.getName()} - Level: ${member.getLevel()}`).join(`\n`));
     }
 
-    addMember(character: Character): void {
+    public addMember(character: Character): void {
         if(this.members.includes(character)){
             console.log(`This Chararcter is already in the party!`);
         }else{
@@ -26,7 +26,7 @@ export class Party {
         }
     }
 
-    removeMember(character: Character): void {
+    public removeMember(character: Character): void {
         const index = this.members.indexOf(character);
         if(index !== -1){
             this.members.splice(index, 1);
