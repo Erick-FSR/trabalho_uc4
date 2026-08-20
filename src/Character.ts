@@ -45,7 +45,6 @@ export class Character{
             console.log(`Health remaining: ${this.health}`);
 
         }
-        
     }
 
     public showInfo(): void{
