@@ -25,5 +25,12 @@ class Mage extends Character_1.Character {
             console.log(`${this.name} does not have enough mana to cast ${this.spell.getName()}!`);
         }
     }
+    showInfo() {
+        console.log(`Name: ${this.name}`);
+        console.log(`Level: ${this.level}`);
+        console.log(`Health: ${this.health}`);
+        console.log(`Mana: ${this.mana}`);
+        console.log(`Spell: ${this.spell.getName()} (Damage: ${this.spell.getDamage()}, Mana Cost: ${this.spell.manaCost})`);
+    }
 }
 exports.Mage = Mage;

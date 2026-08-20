@@ -13,5 +13,12 @@ class Warrior extends Character_1.Character {
         console.log(`${this.name} attacks with ${this.weapon.getName()}`);
         console.log(`Damage dealt: ${damage}`);
     }
+    showInfo() {
+        console.log(`Name: ${this.name}`);
+        console.log(`Level: ${this.level}`);
+        console.log(`Health: ${this.health}`);
+        console.log(`Strength: ${this.strength}`);
+        console.log(`Weapon: ${this.weapon.getName()} (Damage: ${this.weapon.getDamage()})`);
+    }
 }
 exports.Warrior = Warrior;

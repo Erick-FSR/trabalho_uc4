@@ -23,6 +23,10 @@ export class Character{
 
     }
 
+    setLevel(newLevel: number): void{
+        this.level = newLevel;
+    }
+
     getHealth(): number{
         return this.health;
     }
@@ -37,6 +41,8 @@ export class Character{
             console.log(`O personagem não pode morrer!`);
         } else{
             this.health -= amount;
+            console.log(`${this.name} took ${amount} damage!`);
+            console.log(`Health remaining: ${this.health}`);
 
         }
         

@@ -16,6 +16,9 @@ class Character {
     getLevel() {
         return this.level;
     }
+    setLevel(newLevel) {
+        this.level = newLevel;
+    }
     getHealth() {
         return this.health;
     }
@@ -28,6 +31,8 @@ class Character {
         }
         else {
             this.health -= amount;
+            console.log(`${this.name} took ${amount} damage!`);
+            console.log(`Health remaining: ${this.health}`);
         }
     }
     showInfo() {

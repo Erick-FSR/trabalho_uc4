@@ -30,6 +30,7 @@ export class Party {
         const index = this.members.indexOf(character);
         if(index !== -1){
             this.members.splice(index, 1);
+            console.log(`${character.getName()} has been removed from the party.`);
         } 
 
 }
